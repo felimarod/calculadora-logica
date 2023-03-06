@@ -19,14 +19,13 @@ def Index():
 
 @app.route('/solvePreposition', methods=['POST'])
 def solvePreposition():    
-    print("hey")
     if request.method == 'POST':
         print("hey")
         preposicion = request.form['prep']
         print("preposición: " + preposicion)
         resultados = cadena.mostrar_resultado(preposicion)
         print(resultados)
-        return jsonify(message = resultados)
+        return jsonify(resultados)
     return jsonify(message = 'Error en add')
 
 
