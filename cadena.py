@@ -23,14 +23,16 @@ def variables(s):
     return variables
 
 
-def mostrar_resultado(self):
+def mostrar_resultado(prep):
     try:
         os.system('cls')
-        aux = proposicion(self.entrada.get())
-        var = variables(self.entrada.get())
+        aux = proposicion(prep)
+        var = variables(prep)
         table = ttg.Truths(var, [aux])
-        print(aux)
-        print(table)
-        print(table.valuation())
+        # print(aux)
+        # print(table)
+        # print(table.valuation())
+        return { "tabla": table.as_tabulate(table_format="html"), "valoracion":table.valuation()}
+        
     except BaseException:
         print('Entrada invalida')
