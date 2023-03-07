@@ -8,6 +8,9 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
   <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -44,22 +47,20 @@
 
       </form>
     </div>
-    <div id="solucion">
+    <div id="solucion" class="solucion">
     </div>
   </div>
 
-
-
+  <footer>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.0/"><img alt="Licencia Creative Commons"
+        style="border-width:0" src="https://i.creativecommons.org/l/by-nc/2.0/88x31.png" />
+    </a>
+    <div>
+      Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.0/">Licencia
+        Creative Commons Atribución-NoComercial 2.0 Genérica</a>.
+    </div>
+  </footer>
 </body>
-<footer>
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.0/"><img alt="Licencia Creative Commons"
-      style="border-width:0" src="https://i.creativecommons.org/l/by-nc/2.0/88x31.png" />
-  </a>
-  <div>
-    Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.0/">Licencia
-      Creative Commons Atribución-NoComercial 2.0 Genérica</a>.
-  </div>
-</footer>
 <script src="{{url_for('static', filename='js/index.js')}}"></script>
 
 </html>
