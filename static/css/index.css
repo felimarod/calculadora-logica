@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -28,12 +28,10 @@ body div {
 .titulo {
     color: var(--light-text-color);
 }
-h1 {
-    
-}
+
 .calculadora {
     background-color: var(--secondary-color);
-    box-shadow: rgba(236,236,236, 0.25) 0px 54px 55px, rgba(236, 236, 236, 0.12) 0px -12px 30px, rgba(236,236,236, 0.12) 0px 4px 6px, rgba(236,236,236, 0.17) 0px 12px 13px, rgba(236,236,236, 0.09) 0px -3px 5px;
+    box-shadow: rgba(236, 236, 236, 0.25) 0px 54px 55px, rgba(236, 236, 236, 0.12) 0px -12px 30px, rgba(236, 236, 236, 0.12) 0px 4px 6px, rgba(236, 236, 236, 0.17) 0px 12px 13px, rgba(236, 236, 236, 0.09) 0px -3px 5px;
 
     display: flex;
     flex-direction: column;
@@ -43,7 +41,6 @@ h1 {
     border-radius: 5%;
     border-style: none;
 }
-
 
 #entrada {
     text-align: center;
@@ -55,7 +52,8 @@ h1 {
     justify-content: space-between;
 }
 
-.btn {
+input[type="button"],
+input[type="submit"] {
     color: var(--light-text-color);
     background-color: var(--thirth-color);
     font-size: large;
@@ -64,7 +62,7 @@ h1 {
     border-style: none;
 }
 
-.btn:hover {
+input[type="button"]:hover {
     color: var(--light-text-color);
     background-color: var(--main-bg-color);
 }
@@ -81,9 +79,15 @@ h1 {
     justify-content: center;
 }
 
-.primer-linea .btn,
-#btn-calcular {
+.primer-linea>input[type="button"],
+.div-btn-calcular>input[type="submit"] {
     background-color: var(--main-bg-color);
+}
+
+.primer-linea>input[type="button"]:hover,
+.div-btn-calcular>input[type="submit"]:hover {
+    color: var(--main-bg-color);
+    background-color: var(--light-text-color);
 }
 
 footer {
@@ -101,22 +105,22 @@ footer {
     max-height: 50px;
 }
 
-.solucion{
-   background-color: rgba(255, 160, 122, 0.705); 
-   color: #333333;
-   padding: 10px;
-   margin-top: 10px;
-   margin-bottom: 10px;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
+.solucion {
+    display: none;
+    background-color: rgba(255, 160, 122, 0.705);
+    box-shadow: rgba(236, 236, 236, 0.25) 0px 54px 55px, rgba(236, 236, 236, 0.12) 0px -12px 30px, rgba(236, 236, 236, 0.12) 0px 4px 6px, rgba(236, 236, 236, 0.17) 0px 12px 13px, rgba(236, 236, 236, 0.09) 0px -3px 5px;
+    color: #333333;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
 }
 
-.solucion table, td{
-    align-self: center;
-    border: #333333 solid 2px;
-}
-td {
-    padding: 4px;
+th, td  {
+    border: #333333 solid ;
+    padding: 5px;
 }

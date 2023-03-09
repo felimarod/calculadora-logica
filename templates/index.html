@@ -9,8 +9,9 @@
     </script>
   <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='flavicon.ico')}}">
 </head>
 
 <body>
@@ -22,27 +23,27 @@
       <form id="formulario" onsubmit=" return false">
         <div class="primer-linea">
           <input type="text" name="Premisa " id="entrada" placeholder="Aquí va la oración">
-          <input class="btn" type="button" value="←" onclick="borrarUltimo()">
+          <input type="button" value="←" name="Borrar último" onclick="borrarUltimo()">
         </div>
 
         <div class="botones letras">
 
-          <input class="btn" type="button" value="p" onclick="agregar('p')">
-          <input class="btn" type="button" value="q" onclick="agregar('q')">
-          <input class="btn" type="button" value="r" onclick="agregar('r')">
-          <input class="btn" type="button" value="(" onclick="agregar('(')">
-          <input class="btn" type="button" value=")" onclick="agregar(')')">
+          <input type="button" value="p" onclick="agregar('p')">
+          <input type="button" value="q" onclick="agregar('q')">
+          <input type="button" value="r" onclick="agregar('r')">
+          <input type="button" value="(" onclick="agregar('(')">
+          <input type="button" value=")" onclick="agregar(')')">
         </div>
 
         <div class="botones operadores">
-          <input class="btn" type="button" value="~" onclick="agregar('~')">
-          <input class="btn" type="button" value="^" onclick="agregar('^')">
-          <input class="btn" type="button" value="v" onclick="agregar('v')">
-          <input class="btn" type="button" value="→" onclick="agregar('→')">
-          <input class="btn" type="button" value="↔" onclick="agregar('↔')">
+          <input type="button" value="~" onclick="agregar('~')">
+          <input type="button" value="^" onclick="agregar('^')">
+          <input type="button" value="v" onclick="agregar('v')">
+          <input type="button" value="→" onclick="agregar('→')">
+          <input type="button" value="↔" onclick="agregar('↔')">
         </div>
         <div class="div-btn-calcular">
-          <input id="btn-calcular" class="btn" type="submit" value="Calcular" onclick="solucionar()">
+          <input type="submit" value="Calcular">
         </div>
 
       </form>

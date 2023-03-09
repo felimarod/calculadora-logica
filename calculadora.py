@@ -1,5 +1,5 @@
 import ttg
-import os
+
 
 def proposicion(p):
     aux = ''
@@ -13,26 +13,20 @@ def proposicion(p):
 
 def variables(s):
     variables = []
-    
-    if ("p" in s):
-        variables.append("p")
-    if ("q" in s):
-        variables.append("q")
-    if ("r" in s):
-        variables.append("r")
+    index = 97
+    while index <= 122:
+        char = chr(index)
+        if char in s and char != "v":
+            variables.append(char)
+        index += 1
     return variables
 
 
 def mostrar_resultado(prep):
     try:
-        os.system('cls')
         aux = proposicion(prep)
         var = variables(prep)
         table = ttg.Truths(var, [aux])
-        # print(aux)
-        # print(table)
-        # print(table.valuation())
-        return { "tabla": table.as_tabulate(table_format="html"), "valoracion":table.valuation()}
-        
+        return {"tabla": table.as_tabulate(table_format="html", index=False), "valoracion": table.valuation()}
     except BaseException:
         print('Entrada invalida')

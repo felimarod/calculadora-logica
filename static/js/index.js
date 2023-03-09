@@ -35,13 +35,14 @@ formulario.addEventListener('submit', e=>{
         console.log("Hubo un error con la petición Fetch en RESPONSE" + error);
     }).then((data) => {
         //console.log(data)
-        mensaje = ''
+        document.getElementById("solucion").style.display = "flex";
+        mensaje = "<h3>Solución</h3><br>" + data["tabla"] + "<br>"
         if(data["valoracion"]=='Tautology')
-            mensaje = "<h3>Solución</h3><br>" + data["tabla"] + "<br><p>Y la preposición es una: <b>Tatuología</b></p>";
+            mensaje += "<p><b>Tatuología</b></p>";
         else if(data["valoracion"]=='Contingency')
-            mensaje = "<h3>Solución</h3><br>" + data["tabla"] + "<br><p>Y la preposición es una: <b>Contingencía</b></p>";
+            mensaje += "<p><b>Contingencía</b></p>";
         else if(data["valoracion"]=='Contradiction')
-            mensaje = "<h3>Solución</h3><br>" + data["tabla"] + "<br><p>Y la preposición es una: <b>Contradicción</b></p>" + data["valoracion"];
+            mensaje += "<p><b>Contradicción</b></p>";
         //console.log(mensaje);
         //alert("Se agrego "+ document.getElementById("name").value);
         document.getElementById('solucion').innerHTML = mensaje
